@@ -1,8 +1,8 @@
 {
   "description": "",
-  "displayName": "Weighted Random",
+  "displayName": "Weighted Randoms",
   "keywords": [],
-  "name": "com.little-lion.weighted-random",
+  "name": "com.little-lion.weighted-randoms",
   "unity": "2021.3",
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
