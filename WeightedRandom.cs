@@ -19,14 +19,14 @@ namespace WeightedRandoms
 
         public float[] Weights { get; private set; }
 
-        public int Next(float[] weights)
+        public int Next()
         {
-            var value = _random.NextDouble() * weights.Sum();
-            for (var i = 0; i < weights.Length; i++)
+            var value = _random.NextDouble() * Weights.Sum();
+            for (var i = 0; i < Weights.Length; i++)
             {
-                if (value < weights[i]) return i;
+                if (value < Weights[i]) return i;
                 i++;
-                value -= weights[i];
+                value -= Weights[i];
             }
 
             return -1;
