@@ -5,7 +5,13 @@ namespace WeightedRandoms
 {
     public class WeightedRandom
     {
+        private int _count;
         private Random _random;
+
+        public int Count
+        {
+            set => _count = value;
+        }
 
         public int Seed
         {
@@ -22,7 +28,7 @@ namespace WeightedRandoms
         public int Next()
         {
             var value = _random.NextDouble() * Weights.Sum();
-            for (var i = 0; i < Weights.Length; i++)
+            for (var i = 0; i < _count; i++)
             {
                 if (value < Weights[i]) return i;
                 i++;
